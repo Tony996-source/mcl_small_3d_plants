@@ -1,3 +1,5 @@
+local modpath = minetest.get_modpath("mcl_small_3d_plants")
+
 --
 -- 3D Carrots
 --

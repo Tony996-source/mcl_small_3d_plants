@@ -719,7 +719,7 @@ minetest.register_node(":mcl_farming:wheat", {
 -- 3D Papyrus
 --
 
-minetest.override_item("mcl_core:reeds", {
+minetest.register_node(":mcl_core:reeds", {
     description = "Sugar Canes",
 	tiles = {"mcl_small_3d_plants_papyrus.png"},
 	inventory_image = "mcl_core_reeds.png",

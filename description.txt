@@ -1,1 +1,1 @@
-A mod adding mesh nodes for small plants for Minetest subgame (MineClone2).
+A mod adding mesh nodes for small plants for Minetest subgame (MineClone2 and mineclone 5).

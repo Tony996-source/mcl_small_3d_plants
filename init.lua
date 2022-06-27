@@ -1661,4 +1661,33 @@ tiles = {
 	}
 })
 
+minetest.register_node(":mcl_mushroom:warped_fungus", {
+	tiles = {
+		"mcl_small_3d_plants_warped_fungus_top.png",
+		"mcl_small_3d_plants_warped_fungus_bottom.png",
+		"mcl_small_3d_plants_warped_fungus.png",
+		"mcl_small_3d_plants_warped_fungus.png",
+		"mcl_small_3d_plants_warped_fungus.png",
+		"mcl_small_3d_plants_warped_fungus.png"
+	},
+	drawtype = "nodebox",
+	inventory_image = "farming_warped_fungus.png",
+	wield_image = "farming_warped_fungus.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	groups = {dig_immediate=3,mushroom=1,attached_node=1,dig_by_water=1,destroy_by_lava_flow=1,dig_by_piston=1,deco_block=1, compostability=65},
+	light_source = 1,
+	node_placement_prediction = "",
+	_mcl_blast_resistance = 0,
+	stack_max = 64,
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.0625, 0.0625, -0.1875, 0.0625},
+			{-0.375, -0.1875, -0.375, 0.375, 0.0625, 0.375},
+		}
+	}
+})
+
 dofile(modpath.."/flowerpots.lua")

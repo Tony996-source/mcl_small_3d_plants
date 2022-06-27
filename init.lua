@@ -1392,6 +1392,7 @@ minetest.register_node(":mcl_flowers:poppy", {
 	_mcl_blast_resistance = 0,
 })
 
+if minetest.get_modpath("mcl_nether") then
 minetest.register_node(":mcl_nether:nether_wart_0", {
 	tiles = {
 		"mcl_small_3d_plants_nether_wart_stage_0_top.png",
@@ -1626,7 +1627,9 @@ minetest.register_node(":mcl_nether:nether_wart", {
 		}
 	}
 })
+end
 
+if minetest.get_modpath("mcl_mushroom") then
 minetest.register_node(":mcl_mushroom:crimson_fungus", {
 tiles = {
 		"mcl_small_3d_plants_crimson_fungus_top.png",
@@ -1687,5 +1690,6 @@ minetest.register_node(":mcl_mushroom:warped_fungus", {
 		}
 	}
 })
+end
 
 dofile(modpath.."/flowerpots.lua")

@@ -1,5 +1,9 @@
 local modpath = minetest.get_modpath("mcl_small_3d_plants")
 
+----------------------------------------------------------------------------------------------
+------------------------------------- Farming Plants -----------------------------------------
+----------------------------------------------------------------------------------------------
+
 --
 -- 3D Carrots
 --
@@ -715,6 +719,10 @@ minetest.register_node(":mcl_farming:wheat", {
 	_mcl_blast_resistance = 0,
 })
 
+----------------------------------------------------------------------------------------------
+------------------------------------- Papyrus/Sugar cane -------------------------------------
+----------------------------------------------------------------------------------------------
+
 --
 -- 3D Papyrus
 --
@@ -810,6 +818,10 @@ minetest.register_node(":mcl_core:reeds", {
 	_mcl_hardness = 0,
 })
 
+
+----------------------------------------------------------------------------------------------
+------------------------------------- Mushrooms ----------------------------------------------
+----------------------------------------------------------------------------------------------
 --
 -- 3D Mushrooms
 --
@@ -863,6 +875,10 @@ minetest.register_node(":mcl_mushrooms:mushroom_red", {
 	on_place = on_place,
 	_mcl_blast_resistance = 0,
 })
+
+----------------------------------------------------------------------------------------------
+------------------------------------- Flowers ------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 --
 -- 3D Flowers
@@ -1102,7 +1118,7 @@ minetest.register_node(":mcl_flowers:azure_bluet", {
 		"mcl_small_3d_plants_azure_bluet.png"
 	 },
 	inventory_image = "mcl_flowers_azure_bluet.png",
-	wield_image = "mcl_flowers_allium.png",
+	wield_image = "mcl_flowers_azure_bluet.png",
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
@@ -1392,6 +1408,10 @@ minetest.register_node(":mcl_flowers:poppy", {
 	_mcl_blast_resistance = 0,
 })
 
+----------------------------------------------------------------------------------------------
+------------------------------------- Nether Wart --------------------------------------------
+----------------------------------------------------------------------------------------------
+
 if minetest.get_modpath("mcl_nether") then
 minetest.register_node(":mcl_nether:nether_wart_0", {
 	tiles = {
@@ -1412,7 +1432,6 @@ minetest.register_node(":mcl_nether:nether_wart_0", {
 	drop = "mcl_nether:nether_wart_item",
 	groups = {dig_immediate=3, not_in_creative_inventory=1,plant=1,attached_node=1,dig_by_water=1,destroy_by_lava_flow=1,dig_by_piston=1},
 	sounds = mcl_sounds.node_sound_leaves_defaults(),
-	on_construct = mcl_time.touch,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -1448,7 +1467,6 @@ minetest.register_node(":mcl_nether:nether_wart_1", {
 	inventory_image = "mcl_nether_nether_wart_stage_1.png",
 	groups = {dig_immediate=3, not_in_creative_inventory=1,plant=1,attached_node=1,dig_by_water=1,destroy_by_lava_flow=1,dig_by_piston=1},
 	sounds = mcl_sounds.node_sound_leaves_defaults(),
-	on_construct = mcl_time.touch,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -1500,7 +1518,6 @@ minetest.register_node(":mcl_nether:nether_wart_2", {
 	inventory_image = "mcl_nether_nether_wart_stage_1.png",
 	groups = {dig_immediate=3, not_in_creative_inventory=1,plant=1,attached_node=1,dig_by_water=1,destroy_by_lava_flow=1,dig_by_piston=1},
 	sounds = mcl_sounds.node_sound_leaves_defaults(),
-	on_construct = mcl_time.touch,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -1613,6 +1630,9 @@ minetest.register_node(":mcl_nether:nether_wart", {
 })
 end
 
+----------------------------------------------------------------------------------------------
+------------------------------------- Fungus/Nether Mushroom ---------------------------------
+----------------------------------------------------------------------------------------------
 if minetest.get_modpath("mcl_mushroom") then
 minetest.register_node(":mcl_mushroom:crimson_fungus", {
 tiles = {

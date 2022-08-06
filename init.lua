@@ -1694,6 +1694,69 @@ minetest.register_node(":mcl_mushroom:warped_fungus", {
 		}
 	}
 })
+
+elseif minetest.get_modpath("mcl_crimson") then
+minetest.register_node(":mcl_crimson:crimson_fungus", {
+tiles = {
+		"mcl_small_3d_plants_crimson_fungus_top.png",
+		"mcl_small_3d_plants_crimson_fungus_bottom.png",
+		"mcl_small_3d_plants_crimson_fungus.png",
+		"mcl_small_3d_plants_crimson_fungus.png",
+		"mcl_small_3d_plants_crimson_fungus.png",
+		"mcl_small_3d_plants_crimson_fungus.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	inventory_image = "farming_crimson_fungus.png",
+	wield_image = "farming_crimson_fungus.png",
+	sunlight_propagates = true,
+	walkable = false,
+	groups = {dig_immediate=3,mushroom=1,attached_node=1,dig_by_water=1,destroy_by_lava_flow=1,dig_by_piston=1,enderman_takable=1,deco_block=1, compostability=65},
+	light_source = 1,
+	_mcl_blast_resistance = 0,
+	stack_max = 64,
+	node_placement_prediction = "",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.0625, 0.0625, -0.1875, 0.0625},
+			{-0.25, -0.1875, -0.25, 0.25, -0.125, 0.25},
+			{-0.3125, -0.125, -0.3125, 0.3125, 0, 0.3125},
+			{-0.1875, 0, -0.1875, 0.1875, 0.1875, 0.1875},
+			{-0.125, 0.1875, -0.125, 0.125, 0.25, 0.125},
+		}
+	}
+})
+
+minetest.register_node(":mcl_crimson:warped_fungus", {
+	tiles = {
+		"mcl_small_3d_plants_warped_fungus_top.png",
+		"mcl_small_3d_plants_warped_fungus_bottom.png",
+		"mcl_small_3d_plants_warped_fungus.png",
+		"mcl_small_3d_plants_warped_fungus.png",
+		"mcl_small_3d_plants_warped_fungus.png",
+		"mcl_small_3d_plants_warped_fungus.png"
+	},
+	drawtype = "nodebox",
+	inventory_image = "farming_warped_fungus.png",
+	wield_image = "farming_warped_fungus.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	groups = {dig_immediate=3,mushroom=1,attached_node=1,dig_by_water=1,destroy_by_lava_flow=1,dig_by_piston=1,deco_block=1, compostability=65},
+	light_source = 1,
+	node_placement_prediction = "",
+	_mcl_blast_resistance = 0,
+	stack_max = 64,
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.0625, 0.0625, -0.1875, 0.0625},
+			{-0.375, -0.1875, -0.375, 0.375, 0.0625, 0.375},
+		}
+	}
+})
+
 end
 
 dofile(modpath.."/flowerpots.lua")
